@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Kanoon Mitra — कानून की जानकारी सरल हिंदी और English में।">
+<title>Kanoon Mitra | कानून की सही जानकारी</title>
+<style>
+:root{--navy:#0b2742;--blue:#124f7e;--cream:#fbfaf7;--ink:#142c43;--muted:#5d7081;--line:#dbe4eb;--white:#fff;--pale:#eef6fc}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Arial,"Noto Sans Devanagari",sans-serif;color:var(--ink);background:var(--cream);line-height:1.55}
+a{color:inherit;text-decoration:none}.wrap{width:min(1120px,92%);margin:auto}
+header{background:#fff;border-bottom:1px solid var(--line);position:sticky;top:0;z-index:10}
+.nav{min-height:76px;display:flex;align-items:center;justify-content:space-between;gap:18px}
+.brand{display:flex;align-items:center;gap:11px;color:var(--navy);font-weight:800;font-size:25px;white-space:nowrap}
+.logo{width:43px;height:43px;border:2px solid var(--navy);border-radius:50%;display:grid;place-items:center;font-size:25px}
+.tagline{display:block;font-size:11px;font-weight:500;color:var(--muted);letter-spacing:.4px}
+nav{display:flex;align-items:center;gap:18px;font-size:13px;font-weight:700}nav a:hover{color:#1674b7}
+.controls{display:flex;gap:8px;align-items:center}.lang,.menu{border:1px solid var(--line);background:#fff;border-radius:8px;padding:9px 11px;cursor:pointer;color:var(--navy);font-weight:700}.menu{display:none}
+.hero{background:linear-gradient(110deg,rgba(5,23,40,.97),rgba(7,34,55,.90));color:white;padding:58px 0 50px;overflow:hidden}
+.hero-grid{display:grid;grid-template-columns:1.1fr .9fr;align-items:center;gap:30px}
+.eyebrow{color:#b9d9f1;font-weight:700;letter-spacing:1px;text-transform:uppercase;font-size:12px}
+h1{font-size:clamp(36px,5vw,58px);line-height:1.08;margin:8px 0 12px;letter-spacing:-1px}
+.hero h2{font-size:22px;margin:0 0 12px}.hero p{color:#e2edf5;max-width:610px}
+.hero-art{min-height:250px;display:grid;place-items:center;position:relative}
+.book{font-size:115px;filter:drop-shadow(0 18px 14px #0007)}.scales{font-size:90px;position:absolute;right:4%;top:0;opacity:.95}
+.search{display:flex;background:white;padding:5px;border-radius:10px;max-width:650px;margin:23px 0 12px;box-shadow:0 8px 24px #0002}
+.search input{flex:1;min-width:0;border:0;outline:0;padding:12px;color:var(--ink);font-size:15px}.search button,.primary{background:var(--blue);color:#fff;border:0;border-radius:7px;padding:12px 18px;font-weight:700;cursor:pointer}
+.quick{font-size:13px;color:#d9e8f4}.quick a{text-decoration:underline;margin-right:12px}
+.features{display:grid;grid-template-columns:repeat(5,1fr);background:#fff;border-bottom:1px solid var(--line);padding:25px 0}
+.feature{text-align:center;padding:8px 14px;border-right:1px solid var(--line)}.feature:last-child{border:0}.feature-icon{font-size:27px}.feature strong{display:block;color:var(--navy);margin:5px 0}.feature small{color:var(--muted)}
+section.content{padding:42px 0}.section-head{display:flex;align-items:end;justify-content:space-between;gap:15px;margin-bottom:20px}.section-head h2{font-size:28px;color:var(--navy);margin:0}.section-head p{margin:4px 0 0;color:var(--muted)}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:13px}.card{border:1px solid var(--line);background:white;border-radius:10px;padding:18px;min-height:145px;transition:transform .15s,box-shadow .15s}.card:hover{transform:translateY(-2px);box-shadow:0 8px 22px #0b274210}.card .emoji{font-size:27px}.card h3{font-size:16px;color:var(--navy);margin:8px 0 5px}.card p{font-size:13px;color:var(--muted);margin:0}.card .arrow{display:block;text-align:right;color:var(--blue);font-size:20px}
+.notice{margin-top:20px;padding:18px 20px;border:1px solid #c7e1f6;background:var(--pale);border-radius:10px;display:flex;align-items:center;justify-content:space-between;gap:20px}.notice strong{font-size:17px;color:var(--navy)}.notice p{margin:4px 0 0;color:var(--muted);font-size:13px}
+.resources{background:#f1f5f8;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}.resource-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}.resource{background:#fff;border:1px solid var(--line);padding:20px;border-radius:10px}.resource h3{margin:0 0 7px;color:var(--navy)}.resource p{font-size:14px;color:var(--muted)}
+footer{background:#091e31;color:#e5edf4;padding:34px 0 14px}.footgrid{display:grid;grid-template-columns:1.3fr 1fr 1fr 1.2fr;gap:24px}.footgrid h3{font-size:14px;color:#fff}.footgrid a,.footgrid p{display:block;color:#c6d4e0;font-size:12px;margin:7px 0}.copyright{border-top:1px solid #ffffff25;margin-top:24px;padding-top:13px;font-size:11px;color:#b8c7d5;display:flex;justify-content:space-between;gap:12px}
+.hidden{display:none!important}.empty{grid-column:1/-1;text-align:center;color:var(--muted);padding:25px}
+.disclaimer{font-size:12px;color:#c6d4e0;max-width:390px}
+@media(max-width:850px){nav{display:none;position:absolute;top:76px;left:0;right:0;background:#fff;padding:16px 4%;border-bottom:1px solid var(--line);flex-wrap:wrap}nav.open{display:flex}.menu{display:block}.hero-grid{grid-template-columns:1fr}.hero-art{display:none}.features{grid-template-columns:repeat(2,1fr)}.feature{border-right:0;border-bottom:1px solid var(--line)}.grid{grid-template-columns:repeat(2,1fr)}.footgrid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:520px){.brand{font-size:21px}.logo{width:37px;height:37px}.hero{padding:40px 0}.hero h2{font-size:19px}.search button{padding:10px}.section-head{display:block}.section-head h2{font-size:24px}.grid,.resource-grid{grid-template-columns:1fr}.features{grid-template-columns:1fr}.feature{border-bottom:1px solid var(--line)}.notice{align-items:flex-start;flex-direction:column}.footgrid{grid-template-columns:1fr 1fr}.copyright{display:block}.copyright span{display:block;margin-top:6px}}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="#home" aria-label="Kanoon Mitra home"><span class="logo">⚖</span><span>Kanoon Mitra<span class="tagline" data-hi="Jankari | Samajh | Nyay ki Ore" data-en="Knowledge | Clarity | Towards Justice">Jankari | Samajh | Nyay ki Ore</span></span></a>
+    <nav id="nav"><a href="#home" data-hi="होम" data-en="Home">होम</a><a href="#topics" data-hi="कानूनी विषय" data-en="Legal Topics">कानूनी विषय</a><a href="#acts" data-hi="अधिनियम" data-en="Acts & Laws">अधिनियम</a><a href="#cases" data-hi="केस लॉ" data-en="Case Law">केस लॉ</a><a href="#resources" data-hi="नोट्स व संसाधन" data-en="Notes & Resources">नोट्स व संसाधन</a><a href="#about" data-hi="हमारे बारे में" data-en="About">हमारे बारे में</a></nav>
+    <div class="controls"><button class="lang" id="langBtn" aria-label="Change language">🌐 हिंदी | English</button><button class="menu" id="menuBtn" aria-label="Open menu">☰</button></div>
+  </div>
+</header>
+<main>
+<section class="hero" id="home"><div class="wrap hero-grid">
+  <div><div class="eyebrow" data-hi="कानूनी जानकारी अब हुई आसान" data-en="Legal information made simpler">कानूनी जानकारी अब हुई आसान</div>
+    <h1>Kanoon Mitra</h1><h2 data-hi="कानून की सही जानकारी, सरल भाषा में" data-en="Understand the law, in plain language">कानून की सही जानकारी, सरल भाषा में</h2>
+    <p data-hi="यह वेबसाइट कानून, अधिनियम, केस लॉ और अध्ययन-सामग्री को आसान भाषा में समझने में मदद करने के लिए बनाई गई है।" data-en="A learning-focused guide to laws, legal cases and study resources, explained in accessible language.">यह वेबसाइट कानून, अधिनियम, केस लॉ और अध्ययन-सामग्री को आसान भाषा में समझने में मदद करने के लिए बनाई गई है।</p>
+    <form class="search" id="searchForm"><input id="searchInput" type="search" aria-label="Search legal topics" placeholder="किसी विषय, अधिनियम या केस का नाम खोजें..." data-placeholder-hi="किसी विषय, अधिनियम या केस का नाम खोजें..." data-placeholder-en="Search a topic, act, section or case..."><button type="submit" data-hi="खोजें" data-en="Search">खोजें</button></form>
+    <div class="quick"><span data-hi="जैसे:" data-en="Try:">जैसे:</span> <a href="#constitution">संविधान</a><a href="#bns">BNS 2023</a><a href="#resources">RTI</a><a href="#topics">मौलिक अधिकार</a></div>
+  </div>
+  <div class="hero-art" aria-hidden="true"><span class="book">📚</span><span class="scales">⚖️</span></div>
+</div></section>
+<div class="features wrap">
+  <div class="feature"><span class="feature-icon">📖</span><strong data-hi="सरल भाषा में जानकारी" data-en="Plain-language guides">सरल भाषा में जानकारी</strong><small data-hi="जटिल विषयों को आसान तरीके से समझें" data-en="Make complex topics easier to understand">जटिल विषयों को आसान तरीके से समझें</small></div>
+  <div class="feature"><span class="feature-icon">📄</span><strong data-hi="अधिनियम और धाराएँ" data-en="Acts & Sections">अधिनियम और धाराएँ</strong><small data-hi="प्रमुख कानूनों का परिचय" data-en="Introductions to key laws">प्रमुख कानूनों का परिचय</small></div>
+  <div class="feature"><span class="feature-icon">⚖️</span><strong data-hi="महत्वपूर्ण केस लॉ" data-en="Important Case Law">महत्वपूर्ण केस लॉ</strong><small data-hi="न्यायिक निर्णयों का अध्ययन" data-en="Learn from court decisions">न्यायिक निर्णयों का अध्ययन</small></div>
+  <div class="feature"><span class="feature-icon">📝</span><strong data-hi="नोट्स और स्टडी मटेरियल" data-en="Notes & Study Material">नोट्स और स्टडी मटेरियल</strong><small data-hi="विद्यार्थियों के लिए उपयोगी संसाधन" data-en="Useful resources for students">विद्यार्थियों के लिए उपयोगी संसाधन</small></div>
+  <div class="feature"><span class="feature-icon">👥</span><strong data-hi="सीखने के लिए" data-en="Made for learners">सीखने के लिए</strong><small data-hi="विद्यार्थी और आम नागरिक" data-en="Students and the public">विद्यार्थी और आम नागरिक</small></div>
+</div>
+<section class="content wrap" id="topics">
+  <div class="section-head"><div><h2 data-hi="कानूनी विषयों की प्रमुख श्रेणियाँ" data-en="Explore Legal Topics">कानूनी विषयों की प्रमुख श्रेणियाँ</h2><p data-hi="अपनी जरूरत के अनुसार विषय चुनें।" data-en="Choose a topic to begin exploring.">अपनी जरूरत के अनुसार विषय चुनें।</p></div><a href="#resources" data-hi="सभी संसाधन →" data-en="All resources →">सभी संसाधन →</a></div>
+  <div class="grid" id="topicGrid">
+    <a class="card searchable" id="constitution" data-search="भारतीय संविधान constitution fundamental rights मौलिक अधिकार" href="#resources"><span class="emoji">🏛️</span><h3 data-hi="भारतीय संविधान" data-en="Constitution of India">भारतीय संविधान</h3><p data-hi="मौलिक अधिकार, नीति निर्देशक तत्व और संवैधानिक व्यवस्था।" data-en="Fundamental rights, directive principles and constitutional structure.">मौलिक अधिकार, नीति निर्देशक तत्व और संवैधानिक व्यवस्था।</p><span class="arrow">→</span></a>
+    <a class="card searchable" id="bns" data-search="BNS 2023 भारतीय न्याय संहिता अपराध दंड" href="#resources"><span class="emoji">⚒️</span><h3 data-hi="भारतीय न्याय संहिता (BNS 2023)" data-en="Bharatiya Nyaya Sanhita (BNS 2023)">भारतीय न्याय संहिता (BNS 2023)</h3><p data-hi="अपराध, दंड और आपराधिक कानून की मूल बातें।" data-en="Crime, punishments and criminal-law basics.">अपराध, दंड और आपराधिक कानून की मूल बातें।</p><span class="arrow">→</span></a>
+    <a class="card searchable" data-search="CPC सिविल प्रक्रिया संहिता civil procedure" href="#resources"><span class="emoji">📘</span><h3 data-hi="दीवानी प्रक्रिया (CPC)" data-en="Civil Procedure (CPC)">दीवानी प्रक्रिया (CPC)</h3><p data-hi="वाद, प्रक्रिया, न्यायालय और आदेशों की जानकारी।" data-en="An introduction to civil suits, court procedure and orders.">वाद, प्रक्रिया, न्यायालय और आदेशों की जानकारी।</p><span class="arrow">→</span></a>
+    <a class="card searchable" data-search="साक्ष्य अधिनियम evidence act Bharatiya Sakshya Adhiniyam" href="#resources"><span class="emoji">👥</span><h3 data-hi="साक्ष्य अधिनियम" data-en="Evidence Law">साक्ष्य अधिनियम</h3><p data-hi="साक्ष्य के प्रकार, स्वीकार्यता और संबंधित नियम।" data-en="Types of evidence, admissibility and related rules.">साक्ष्य के प्रकार, स्वीकार्यता और संबंधित नियम।</p><span class="arrow">→</span></a>
+    <a class="card searchable" data-search="कानूनी इतिहास legal history" href="#resources"><span class="emoji">🏛</span><h3 data-hi="कानूनी इतिहास" data-en="Legal History">कानूनी इतिहास</h3><p data-hi="भारत में कानून और न्यायिक संस्थाओं का विकास।" data-en="The development of law and courts in India.">भारत में कानून और न्यायिक संस्थाओं का विकास।</p><span class="arrow">→</span></a>
+    <a class="card searchable" data-search="तुलनात्मक संविधान comparative constitution UK USA Switzerland" href="#resources"><span class="emoji">⚖️</span><h3 data-hi="तुलनात्मक संविधान" data-en="Comparative Constitutions">तुलनात्मक संविधान</h3><p data-hi="यूके, अमेरिका, स्विट्ज़रलैंड आदि की संवैधानिक व्यवस्था।" data-en="Constitutional systems of the UK, US, Switzerland and more.">यूके, अमेरिका, स्विट्ज़रलैंड आदि की संवैधानिक व्यवस्था।</p><span class="arrow">→</span></a>
+    <a class="card searchable" id="cases" data-search="केस लॉ न्यायिक निर्णय supreme court judgments case law" href="#resources"><span class="emoji">🗂️</span><h3 data-hi="केस लॉ और निर्णय" data-en="Case Law & Judgments">केस लॉ और निर्णय</h3><p data-hi="प्रमुख मामलों के तथ्य, मुद्दे और निर्णय समझें।" data-en="Explore facts, issues and rulings in notable cases.">प्रमुख मामलों के तथ्य, मुद्दे और निर्णय समझें।</p><span class="arrow">→</span></a>
+    <a class="card searchable" data-search="करियर law career judiciary CLAT NET legal research" href="#resources"><span class="emoji">🎓</span><h3 data-hi="कानूनी करियर और अवसर" data-en="Legal Careers & Opportunities">कानूनी करियर और अवसर</h3><p data-hi="न्यायिक सेवा, वकालत, शोध और आगे की पढ़ाई।" data-en="Judicial services, advocacy, research and further study.">न्यायिक सेवा, वकालत, शोध और आगे की पढ़ाई।</p><span class="arrow">→</span></a>
+  </div>
+  <div class="empty hidden" id="emptyState" data-hi="कोई मिलता-जुलता विषय नहीं मिला। दूसरा शब्द खोजें।" data-en="No matching topic found. Try another search term.">कोई मिलता-जुलता विषय नहीं मिला। दूसरा शब्द खोजें।</div>
+  <div class="notice"><div><strong data-hi="“कानून की जानकारी हर नागरिक के लिए जरूरी है।”" data-en="“Legal awareness matters for every citizen.”">“कानून की जानकारी हर नागरिक के लिए जरूरी है।”</strong><p data-hi="सीखना शुरू करें और अपने कानूनी ज्ञान को बेहतर बनाएं।" data-en="Start learning and build your understanding of the law.">सीखना शुरू करें और अपने कानूनी ज्ञान को बेहतर बनाएं।</p></div><a class="primary" href="#resources" data-hi="सीखना शुरू करें →" data-en="Start learning →">सीखना शुरू करें →</a></div>
+</section>
+<section class="content resources" id="resources"><div class="wrap"><div class="section-head"><div><h2 data-hi="नोट्स और उपयोगी संसाधन" data-en="Notes & Useful Resources">नोट्स और उपयोगी संसाधन</h2><p data-hi="आधिकारिक स्रोतों से कानून की पुष्टि करना न भूलें।" data-en="Always verify legal information with official sources.">आधिकारिक स्रोतों से कानून की पुष्टि करना न भूलें।</p></div></div>
+<div class="resource-grid">
+  <div class="resource"><h3 data-hi="📚 विद्यार्थियों के नोट्स" data-en="📚 Student Notes">📚 विद्यार्थियों के नोट्स</h3><p data-hi="यहाँ विषयवार नोट्स और अध्ययन सामग्री जोड़ी जा सकती है।" data-en="Topic-wise notes and study material can be added here.">यहाँ विषयवार नोट्स और अध्ययन सामग्री जोड़ी जा सकती है।</p></div>
+  <div class="resource"><h3 data-hi="🏛️ आधिकारिक कानून" data-en="🏛️ Official Legal Sources">🏛️ आधिकारिक कानून</h3><p><a href="https://www.indiacode.nic.in/" target="_blank" rel="noopener">India Code ↗</a> — <span data-hi="केंद्रीय अधिनियमों का आधिकारिक संग्रह।" data-en="Official repository of central acts.">केंद्रीय अधिनियमों का आधिकारिक संग्रह।</span></p></div>
+  <div class="resource"><h3 data-hi="🔎 न्यायालय की वेबसाइट" data-en="🔎 Court Websites">🔎 न्यायालय की वेबसाइट</h3><p><a href="https://www.sci.gov.in/" target="_blank" rel="noopener">Supreme Court of India ↗</a> — <span data-hi="निर्णयों और न्यायालय संबंधी जानकारी के लिए।" data-en="For judgments and court information.">निर्णयों और न्यायालय संबंधी जानकारी के लिए।</span></p></div>
+</div></div></section>
+<section class="content wrap" id="about"><div class="section-head"><div><h2 data-hi="Kanoon Mitra के बारे में" data-en="About Kanoon Mitra">Kanoon Mitra के बारे में</h2><p data-hi="कानून को समझने में मदद करने वाला एक शैक्षिक मंच।" data-en="An educational platform to help people understand the law.">कानून को समझने में मदद करने वाला एक शैक्षिक मंच।</p></div></div><p data-hi="Kanoon Mitra का उद्देश्य कानूनी विषयों को सरल हिंदी और English में समझने योग्य बनाना है। सामग्री को पढ़ाई और सामान्य जानकारी के लिए उपयोग करें।" data-en="Kanoon Mitra aims to explain legal topics in accessible Hindi and English. Content is intended for study and general information.">Kanoon Mitra का उद्देश्य कानूनी विषयों को सरल हिंदी और English में समझने योग्य बनाना है। सामग्री को पढ़ाई और सामान्य जानकारी के लिए उपयोग करें।</p></section>
+</main>
+<footer><div class="wrap"><div class="footgrid">
+  <div><div class="brand" style="color:#fff"><span class="logo" style="border-color:#fff">⚖</span><span>Kanoon Mitra<span class="tagline" style="color:#c6d4e0">Jankari | Samajh | Nyay ki Ore</span></span></div><p data-hi="कानूनी जागरूकता के लिए एक शैक्षिक पहल।" data-en="An educational initiative for legal awareness.">कानूनी जागरूकता के लिए एक शैक्षिक पहल।</p></div>
+  <div><h3 data-hi="त्वरित लिंक" data-en="Quick Links">त्वरित लिंक</h3><a href="#home" data-hi="होम" data-en="Home">होम</a><a href="#topics" data-hi="कानूनी विषय" data-en="Legal Topics">कानूनी विषय</a><a href="#cases" data-hi="केस लॉ" data-en="Case Law">केस लॉ</a><a href="#resources" data-hi="संसाधन" data-en="Resources">संसाधन</a></div>
+  <div><h3 data-hi="उपयोगी लिंक" data-en="Useful Links">उपयोगी लिंक</h3><a href="https://www.indiacode.nic.in/" target="_blank" rel="noopener">India Code</a><a href="https://www.sci.gov.in/" target="_blank" rel="noopener">Supreme Court of India</a><a href="https://ecourts.gov.in/" target="_blank" rel="noopener">eCourts Services</a></div>
+  <div><h3 data-hi="महत्वपूर्ण सूचना" data-en="Important Disclaimer">महत्वपूर्ण सूचना</h3><p class="disclaimer" data-hi="यह वेबसाइट केवल शैक्षिक और सामान्य जानकारी के लिए है, कानूनी सलाह नहीं। किसी विशेष मामले में योग्य वकील से सलाह लें और आधिकारिक स्रोतों से कानून की पुष्टि करें।" data-en="This website is for educational and general information only, not legal advice. Consult a qualified lawyer for your specific matter and verify laws using official sources.">यह वेबसाइट केवल शैक्षिक और सामान्य जानकारी के लिए है, कानूनी सलाह नहीं। किसी विशेष मामले में योग्य वकील से सलाह लें और आधिकारिक स्रोतों से कानून की पुष्टि करें।</p></div>
+</div><div class="copyright"><span>© <span id="year"></span> Kanoon Mitra. All rights reserved.</span><span data-hi="कानूनी जागरूकता के लिए बनाया गया" data-en="Made for better legal awareness">कानूनी जागरूकता के लिए बनाया गया</span></div></div></footer>
+<script>
+let language='hi';
+const langBtn=document.getElementById('langBtn');
+function setLanguage(lang){
+ language=lang;document.documentElement.lang=lang;
+ document.querySelectorAll('[data-hi][data-en]').forEach(el=>{el.textContent=el.dataset[lang]});
+ const input=document.getElementById('searchInput');input.placeholder=input.dataset['placeholder-'+lang];
+ langBtn.textContent=lang==='hi'?'🌐 हिंदी | English':'🌐 English | हिंदी';
+}
+langBtn.addEventListener('click',()=>setLanguage(language==='hi'?'en':'hi'));
+document.getElementById('menuBtn').addEventListener('click',()=>document.getElementById('nav').classList.toggle('open'));
+document.querySelectorAll('#nav a').forEach(a=>a.addEventListener('click',()=>document.getElementById('nav').classList.remove('open')));
+document.getElementById('year').textContent=new Date().getFullYear();
+document.getElementById('searchForm').addEventListener('submit',e=>{
+ e.preventDefault();const q=document.getElementById('searchInput').value.trim().toLocaleLowerCase();
+ let shown=0;document.querySelectorAll('.searchable').forEach(card=>{const hay=(card.innerText+' '+card.dataset.search).toLocaleLowerCase();const match=!q||hay.includes(q);card.classList.toggle('hidden',!match);if(match)shown++});
+ document.getElementById('emptyState').classList.toggle('hidden',shown>0);
+ document.getElementById('topics').scrollIntoView({behavior:'smooth'});
+});
+</script>
+</body>
+</html>
