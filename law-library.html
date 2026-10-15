@@ -1,160 +1,131 @@
-
-<!DOCTYPE html>
+<!doctype html>
 <html lang="hi">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Kanoon Mitra Legal Library — भारतीय कानून, अधिनियम, धाराएँ और केस लॉ।">
-<title>Legal Library | Kanoon Mitra</title>
-<style>
-:root{--navy:#0b2742;--blue:#124f7e;--bg:#f5f8fb;--line:#dbe4eb;--muted:#5d7081}
-*{box-sizing:border-box}
-body{margin:0;font-family:Arial,sans-serif;background:var(--bg);color:#142c43;line-height:1.6}
-header{background:var(--navy);color:white;padding:25px 5%}
-header a{color:white;text-decoration:none}
-main{width:min(1050px,92%);margin:30px auto}
-h1{margin:0;font-size:30px}
-.sub{color:#e0eaf3}
-.search{display:flex;gap:8px;margin:22px 0}
-input{width:100%;padding:14px;border:1px solid var(--line);border-radius:9px;font-size:16px}
-.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:15px}
-.card{background:white;padding:19px;border:1px solid var(--line);border-radius:12px}
-.card h2{font-size:19px;margin:5px 0;color:var(--navy)}
-.card p{font-size:14px;color:var(--muted)}
-.card a{color:var(--blue);font-weight:bold}
-.tag{font-size:12px;background:#eaf3fb;padding:4px 8px;border-radius:5px}
-.note{padding:15px;background:#fff8e8;border:1px solid #f0dfb5;border-radius:9px;margin:22px 0}
-#empty{display:none;padding:20px}
-footer{text-align:center;padding:25px;color:var(--muted)}
-@media(max-width:700px){.grid{grid-template-columns:1fr 1fr}}
-@media(max-width:450px){.grid{grid-template-columns:1fr}h1{font-size:25px}}
-</style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Kanoon Mitra Legal Library — कानून, धाराएँ और महत्वपूर्ण केस लॉ सरल हिंदी में।">
+  <meta name="theme-color" content="#0b2742">
+  <title>Legal Library | Kanoon Mitra</title>
+  <style>
+    :root{--navy:#0b2742;--blue:#124f7a;--gold:#f2b84b;--ink:#172536;--muted:#607080;--paper:#f4f7fa;--line:#dce4ec;--white:#fff;--green:#176b50}
+    *{box-sizing:border-box}
+    body{margin:0;background:var(--paper);color:var(--ink);font-family:system-ui,-apple-system,"Noto Sans Devanagari",Arial,sans-serif;line-height:1.6}
+    a{color:#075a9c}
+    .hero{background:linear-gradient(135deg,var(--navy),#145780);color:white;padding:28px 16px 24px}
+    .wrap{width:min(1100px,100% - 28px);margin:auto}
+    .topline{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
+    .brand{font-weight:800;font-size:1.15rem;letter-spacing:.2px}
+    .home-link{color:white;text-decoration:none;border:1px solid #ffffff70;border-radius:999px;padding:7px 13px;font-size:.92rem}
+    h1{font-size:clamp(1.65rem,5vw,2.5rem);line-height:1.2;margin:22px 0 8px}
+    .hero p{max-width:760px;color:#e7f1f8;margin:0}
+    .search-panel{background:white;border:1px solid var(--line);border-radius:16px;padding:16px;margin-top:-18px;position:relative;box-shadow:0 8px 26px #102b4410}
+    .search-label{display:block;font-weight:700;margin-bottom:7px}
+    .search-row{display:grid;grid-template-columns:1fr auto;gap:9px}
+    input,select,button{font:inherit}
+    input,select{width:100%;border:1px solid #bac8d5;border-radius:10px;padding:12px;background:#fff;color:var(--ink);min-height:46px}
+    button{cursor:pointer}
+    .clear-btn{border:0;border-radius:10px;background:var(--navy);color:white;padding:0 16px;font-weight:700}
+    .filters{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:12px}
+    .tabs{display:flex;gap:8px;flex-wrap:wrap;margin:22px 0 14px}
+    .tab{border:1px solid var(--line);background:#fff;color:var(--navy);padding:9px 14px;border-radius:999px;font-weight:700}
+    .tab[aria-pressed="true"]{background:var(--navy);color:white;border-color:var(--navy)}
+    .results-head{display:flex;align-items:center;justify-content:space-between;gap:12px;margin:12px 0}
+    .count{font-size:.92rem;color:var(--muted)}
+    .grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+    .card{background:white;border:1px solid var(--line);border-radius:14px;padding:17px;display:flex;flex-direction:column;gap:8px;min-width:0}
+    .tag{display:inline-block;align-self:flex-start;background:#e8f1f8;color:#174c70;border-radius:999px;padding:4px 9px;font-size:.78rem;font-weight:800}
+    .card h2{font-size:1.12rem;line-height:1.4;margin:0}
+    .card p{margin:0;color:#3f5060}
+    .meta{font-size:.85rem;color:var(--muted)}
+    .card-actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:auto;padding-top:5px}
+    .detail-btn,.source-link{border-radius:9px;padding:8px 11px;text-decoration:none;font-weight:700;font-size:.9rem}
+    .detail-btn{border:0;background:#e9f1f7;color:var(--navy)}
+    .source-link{border:1px solid var(--line);color:#075a9c}
+    .empty,.status{background:white;border:1px dashed #b7c7d5;border-radius:12px;padding:22px;text-align:center;color:var(--muted)}
+    .hidden{display:none!important}
+    footer{margin-top:34px;background:#e8eef3;padding:22px 0;color:#536272;font-size:.88rem}
+    .modal{position:fixed;inset:0;background:#061624b8;display:none;align-items:center;justify-content:center;padding:16px;z-index:10}
+    .modal.open{display:flex}
+    .modal-box{background:white;border-radius:16px;max-width:720px;width:100%;max-height:88vh;overflow:auto;padding:22px}
+    .modal-head{display:flex;justify-content:space-between;gap:14px;align-items:flex-start}
+    .modal h2{margin:4px 0 10px;font-size:1.35rem}
+    .close-btn{border:0;background:#edf2f6;border-radius:9px;padding:7px 11px;font-size:1.1rem}
+    .detail-body p{margin:10px 0}
+    .detail-body h3{font-size:1rem;margin:18px 0 4px}
+    .disclaimer{border-left:4px solid var(--gold);padding:10px 12px;background:#fff8e8;border-radius:6px;margin-top:20px}
+    @media(max-width:680px){.wrap{width:min(100% - 20px,1100px)}.filters{grid-template-columns:1fr}.grid{grid-template-columns:1fr}.search-row{grid-template-columns:1fr}.clear-btn{min-height:44px}.search-panel{padding:12px}.hero{padding-top:20px}.card{padding:15px}}
+  </style>
 </head>
 <body>
-<header>
-<a href="index.html">← Kanoon Mitra Home</a>
-<h1>⚖️ Legal Library</h1>
-<div class="sub">कानून पढ़ें • सरल हिंदी में समझें • केस लॉ खोजें</div>
-</header>
+  <header class="hero">
+    <div class="wrap">
+      <div class="topline">
+        <div class="brand">⚖️ Kanoon Mitra</div>
+        <a class="home-link" href="./index.html">← मुख्य वेबसाइट</a>
+      </div>
+      <h1>📚 Legal Library</h1>
+      <p>कानून, धाराएँ और महत्वपूर्ण न्यायिक निर्णय — सरल हिंदी में, विद्यार्थियों और आम नागरिकों दोनों के लिए।</p>
+    </div>
+  </header>
 
-<main>
-<h2>कानूनी ज्ञान केंद्र</h2>
-<p>कानून, अधिनियम, धाराओं और न्यायिक निर्णयों की लाइब्रेरी।</p>
+  <main class="wrap">
+    <section class="search-panel" aria-label="कानूनी जानकारी खोजें">
+      <label class="search-label" for="searchInput">कानून, धारा, अनुच्छेद या केस खोजें</label>
+      <div class="search-row">
+        <input id="searchInput" type="search" placeholder="उदाहरण: अनुच्छेद 21, BNS 303, Maneka Gandhi" autocomplete="off">
+        <button class="clear-btn" id="clearBtn" type="button">खोज साफ़ करें</button>
+      </div>
+      <div class="filters">
+        <label><span class="search-label">सामग्री का प्रकार</span>
+          <select id="typeFilter">
+            <option value="all">सभी सामग्री</option>
+            <option value="law">कानून / धारा</option>
+            <option value="case">केस लॉ</option>
+          </select>
+        </label>
+        <label><span class="search-label">कानून / विषय</span>
+          <select id="categoryFilter"><option value="all">सभी विषय</option></select>
+        </label>
+        <label><span class="search-label">पाठक</span>
+          <select id="audienceFilter">
+            <option value="all">सभी के लिए</option>
+            <option value="student">LLB विद्यार्थी</option>
+            <option value="public">आम नागरिक</option>
+          </select>
+        </label>
+      </div>
+    </section>
 
-<div class="search">
-<input id="q" type="search"
-placeholder="कानून, अधिनियम या केस लॉ खोजें..."
-aria-label="Search legal library">
-</div>
+    <nav class="tabs" aria-label="त्वरित फ़िल्टर">
+      <button class="tab" type="button" data-tab="all" aria-pressed="true">सभी</button>
+      <button class="tab" type="button" data-tab="law" aria-pressed="false">कानून और धाराएँ</button>
+      <button class="tab" type="button" data-tab="case" aria-pressed="false">महत्वपूर्ण केस लॉ</button>
+    </nav>
 
-<div class="grid" id="library">
+    <div class="results-head">
+      <strong id="sectionTitle">सभी कानूनी सामग्री</strong>
+      <span class="count" id="resultCount" aria-live="polite">लोड हो रहा है…</span>
+    </div>
+    <div id="status" class="status">जानकारी लोड हो रही है…</div>
+    <section id="results" class="grid" aria-live="polite"></section>
+    <div id="emptyState" class="empty hidden">इस खोज से कोई परिणाम नहीं मिला। दूसरा शब्द या फ़िल्टर आज़माएँ।</div>
 
-<article class="card" data-key="भारतीय संविधान constitution articles amendments fundamental rights">
-<span class="tag">Constitutional Law</span>
-<h2>भारतीय संविधान</h2>
-<p>अनुच्छेद, मौलिक अधिकार, नीति निर्देशक तत्व और संवैधानिक संशोधन।</p>
-<a href="https://www.indiacode.nic.in/" target="_blank" rel="noopener">आधिकारिक कानून खोजें ↗</a>
-</article>
+    <aside class="disclaimer">
+      <strong>महत्वपूर्ण सूचना:</strong> यह शैक्षिक और सामान्य जानकारी है, व्यक्तिगत कानूनी सलाह नहीं। कानूनों में संशोधन हो सकते हैं। किसी वास्तविक मामले में कदम उठाने से पहले नवीनतम आधिकारिक अधिनियम, निर्णय और योग्य अधिवक्ता से पुष्टि करें।
+    </aside>
+  </main>
 
-<article class="card" data-key="bns bharatiya nyaya sanhita 2023 अपराध दंड">
-<span class="tag">Criminal Law</span>
-<h2>BNS, 2023</h2>
-<p>अपराध, दंड, सामान्य अपवाद और आपराधिक दायित्व।</p>
-<a href="https://www.indiacode.nic.in/" target="_blank" rel="noopener">मूल अधिनियम खोजें ↗</a>
-</article>
+  <footer><div class="wrap">© Kanoon Mitra · स्रोतों और कानूनों की नवीनतम स्थिति की पुष्टि करना आवश्यक है।</div></footer>
 
-<article class="card" data-key="bnss bharatiya nagarik suraksha sanhita 2023 criminal procedure">
-<span class="tag">Criminal Procedure</span>
-<h2>BNSS, 2023</h2>
-<p>FIR, जाँच, गिरफ्तारी, जमानत और आपराधिक न्यायिक प्रक्रिया।</p>
-<a href="https://www.indiacode.nic.in/" target="_blank" rel="noopener">मूल अधिनियम खोजें ↗</a>
-</article>
-
-<article class="card" data-key="bsa bharatiya sakshya adhiniyam 2023 evidence साक्ष्य">
-<span class="tag">Evidence Law</span>
-<h2>BSA, 2023</h2>
-<p>साक्ष्य, स्वीकार्यता, दस्तावेज और इलेक्ट्रॉनिक रिकॉर्ड।</p>
-<a href="https://www.indiacode.nic.in/" target="_blank" rel="noopener">मूल अधिनियम खोजें ↗</a>
-</article>
-
-<article class="card" data-key="cpc civil procedure code दीवानी प्रक्रिया">
-<span class="tag">Civil Law</span>
-<h2>CPC</h2>
-<p>दीवानी वाद, न्यायालय की प्रक्रिया, आदेश और डिक्री।</p>
-<a href="https://www.indiacode.nic.in/" target="_blank" rel="noopener">अधिनियम खोजें ↗</a>
-</article>
-
-<article class="card" data-key="indian contract act contract agreement अनुबंध">
-<span class="tag">Contract Law</span>
-<h2>Indian Contract Act</h2>
-<p>प्रस्ताव, स्वीकृति, वैध अनुबंध और अनुबंध का उल्लंघन।</p>
-<a href="https://www.indiacode.nic.in/" target="_blank" rel="noopener">अधिनियम खोजें ↗</a>
-</article>
-
-<article class="card" data-key="family law hindu marriage succession मुस्लिम विवाह उत्तराधिकार">
-<span class="tag">Family Law</span>
-<h2>Family Laws</h2>
-<p>विवाह, तलाक, भरण-पोषण और उत्तराधिकार से जुड़े कानून।</p>
-<a href="https://www.indiacode.nic.in/" target="_blank" rel="noopener">अधिनियम खोजें ↗</a>
-</article>
-
-<article class="card" data-key="pocso child protection बाल संरक्षण">
-<span class="tag">Special Laws</span>
-<h2>POCSO Act</h2>
-<p>बच्चों को लैंगिक अपराधों से संरक्षण देने वाला कानून।</p>
-<a href="https://www.indiacode.nic.in/" target="_blank" rel="noopener">अधिनियम खोजें ↗</a>
-</article>
-
-<article class="card" data-key="rti right to information सूचना का अधिकार consumer protection">
-<span class="tag">Citizen Rights</span>
-<h2>RTI और Consumer Law</h2>
-<p>सूचना का अधिकार और उपभोक्ताओं के कानूनी अधिकार।</p>
-<a href="https://www.indiacode.nic.in/" target="_blank" rel="noopener">अधिनियम खोजें ↗</a>
-</article>
-
-<article class="card" data-key="supreme court high court judgments case law केस लॉ निर्णय">
-<span class="tag">Judgments</span>
-<h2>Case Law Database</h2>
-<p>सुप्रीम कोर्ट और हाई कोर्ट के निर्णय खोजें।</p>
-<a href="https://judgments.ecourts.gov.in/" target="_blank" rel="noopener">न्यायिक फैसले खोजें ↗</a>
-</article>
-
-</div>
-
-<div id="empty">कोई मेल खाता विषय नहीं मिला। दूसरा शब्द खोजें।</div>
-
-<div class="note">
-<strong>महत्त्वपूर्ण सूचना:</strong>
-यह प्रारंभिक लाइब्रेरी है, सभी कानूनों और फैसलों का पूर्ण डेटाबेस नहीं।
-किसी कानूनी मामले में उपयोग से पहले वर्तमान कानून और आधिकारिक निर्णय की पुष्टि करें।
-</div>
-</main>
-
-<footer>© <span id="year"></span> Kanoon Mitra | शैक्षिक जानकारी, कानूनी सलाह नहीं</footer>
-
-<script>
-document.getElementById("year").textContent = new Date().getFullYear();
-
-const input = document.getElementById("q");
-const cards = [...document.querySelectorAll(".card")];
-const empty = document.getElementById("empty");
-
-input.addEventListener("input", () => {
-  const query = input.value.trim().toLocaleLowerCase();
-  let count = 0;
-
-  cards.forEach(card => {
-    const text = (
-      card.innerText + " " + (card.dataset.key || "")
-    ).toLocaleLowerCase();
-
-    const match = text.includes(query);
-    card.style.display = match ? "" : "none";
-    if (match) count++;
-  });
-
-  empty.style.display = count ? "none" : "block";
-});
-</script>
+  <div class="modal" id="detailModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal-box">
+      <div class="modal-head">
+        <div><span id="modalTag" class="tag">विवरण</span><h2 id="modalTitle"></h2></div>
+        <button class="close-btn" id="closeModal" type="button" aria-label="बंद करें">✕</button>
+      </div>
+      <div class="detail-body" id="modalBody"></div>
+    </div>
+  </div>
+  <script src="./script.js" defer></script>
 </body>
 </html>
