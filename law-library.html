@@ -1,0 +1,160 @@
+
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Kanoon Mitra Legal Library — भारतीय कानून, अधिनियम, धाराएँ और केस लॉ।">
+<title>Legal Library | Kanoon Mitra</title>
+<style>
+:root{--navy:#0b2742;--blue:#124f7e;--bg:#f5f8fb;--line:#dbe4eb;--muted:#5d7081}
+*{box-sizing:border-box}
+body{margin:0;font-family:Arial,sans-serif;background:var(--bg);color:#142c43;line-height:1.6}
+header{background:var(--navy);color:white;padding:25px 5%}
+header a{color:white;text-decoration:none}
+main{width:min(1050px,92%);margin:30px auto}
+h1{margin:0;font-size:30px}
+.sub{color:#e0eaf3}
+.search{display:flex;gap:8px;margin:22px 0}
+input{width:100%;padding:14px;border:1px solid var(--line);border-radius:9px;font-size:16px}
+.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:15px}
+.card{background:white;padding:19px;border:1px solid var(--line);border-radius:12px}
+.card h2{font-size:19px;margin:5px 0;color:var(--navy)}
+.card p{font-size:14px;color:var(--muted)}
+.card a{color:var(--blue);font-weight:bold}
+.tag{font-size:12px;background:#eaf3fb;padding:4px 8px;border-radius:5px}
+.note{padding:15px;background:#fff8e8;border:1px solid #f0dfb5;border-radius:9px;margin:22px 0}
+#empty{display:none;padding:20px}
+footer{text-align:center;padding:25px;color:var(--muted)}
+@media(max-width:700px){.grid{grid-template-columns:1fr 1fr}}
+@media(max-width:450px){.grid{grid-template-columns:1fr}h1{font-size:25px}}
+</style>
+</head>
+<body>
+<header>
+<a href="index.html">← Kanoon Mitra Home</a>
+<h1>⚖️ Legal Library</h1>
+<div class="sub">कानून पढ़ें • सरल हिंदी में समझें • केस लॉ खोजें</div>
+</header>
+
+<main>
+<h2>कानूनी ज्ञान केंद्र</h2>
+<p>कानून, अधिनियम, धाराओं और न्यायिक निर्णयों की लाइब्रेरी।</p>
+
+<div class="search">
+<input id="q" type="search"
+placeholder="कानून, अधिनियम या केस लॉ खोजें..."
+aria-label="Search legal library">
+</div>
+
+<div class="grid" id="library">
+
+<article class="card" data-key="भारतीय संविधान constitution articles amendments fundamental rights">
+<span class="tag">Constitutional Law</span>
+<h2>भारतीय संविधान</h2>
+<p>अनुच्छेद, मौलिक अधिकार, नीति निर्देशक तत्व और संवैधानिक संशोधन।</p>
+<a href="https://www.indiacode.nic.in/" target="_blank" rel="noopener">आधिकारिक कानून खोजें ↗</a>
+</article>
+
+<article class="card" data-key="bns bharatiya nyaya sanhita 2023 अपराध दंड">
+<span class="tag">Criminal Law</span>
+<h2>BNS, 2023</h2>
+<p>अपराध, दंड, सामान्य अपवाद और आपराधिक दायित्व।</p>
+<a href="https://www.indiacode.nic.in/" target="_blank" rel="noopener">मूल अधिनियम खोजें ↗</a>
+</article>
+
+<article class="card" data-key="bnss bharatiya nagarik suraksha sanhita 2023 criminal procedure">
+<span class="tag">Criminal Procedure</span>
+<h2>BNSS, 2023</h2>
+<p>FIR, जाँच, गिरफ्तारी, जमानत और आपराधिक न्यायिक प्रक्रिया।</p>
+<a href="https://www.indiacode.nic.in/" target="_blank" rel="noopener">मूल अधिनियम खोजें ↗</a>
+</article>
+
+<article class="card" data-key="bsa bharatiya sakshya adhiniyam 2023 evidence साक्ष्य">
+<span class="tag">Evidence Law</span>
+<h2>BSA, 2023</h2>
+<p>साक्ष्य, स्वीकार्यता, दस्तावेज और इलेक्ट्रॉनिक रिकॉर्ड।</p>
+<a href="https://www.indiacode.nic.in/" target="_blank" rel="noopener">मूल अधिनियम खोजें ↗</a>
+</article>
+
+<article class="card" data-key="cpc civil procedure code दीवानी प्रक्रिया">
+<span class="tag">Civil Law</span>
+<h2>CPC</h2>
+<p>दीवानी वाद, न्यायालय की प्रक्रिया, आदेश और डिक्री।</p>
+<a href="https://www.indiacode.nic.in/" target="_blank" rel="noopener">अधिनियम खोजें ↗</a>
+</article>
+
+<article class="card" data-key="indian contract act contract agreement अनुबंध">
+<span class="tag">Contract Law</span>
+<h2>Indian Contract Act</h2>
+<p>प्रस्ताव, स्वीकृति, वैध अनुबंध और अनुबंध का उल्लंघन।</p>
+<a href="https://www.indiacode.nic.in/" target="_blank" rel="noopener">अधिनियम खोजें ↗</a>
+</article>
+
+<article class="card" data-key="family law hindu marriage succession मुस्लिम विवाह उत्तराधिकार">
+<span class="tag">Family Law</span>
+<h2>Family Laws</h2>
+<p>विवाह, तलाक, भरण-पोषण और उत्तराधिकार से जुड़े कानून।</p>
+<a href="https://www.indiacode.nic.in/" target="_blank" rel="noopener">अधिनियम खोजें ↗</a>
+</article>
+
+<article class="card" data-key="pocso child protection बाल संरक्षण">
+<span class="tag">Special Laws</span>
+<h2>POCSO Act</h2>
+<p>बच्चों को लैंगिक अपराधों से संरक्षण देने वाला कानून।</p>
+<a href="https://www.indiacode.nic.in/" target="_blank" rel="noopener">अधिनियम खोजें ↗</a>
+</article>
+
+<article class="card" data-key="rti right to information सूचना का अधिकार consumer protection">
+<span class="tag">Citizen Rights</span>
+<h2>RTI और Consumer Law</h2>
+<p>सूचना का अधिकार और उपभोक्ताओं के कानूनी अधिकार।</p>
+<a href="https://www.indiacode.nic.in/" target="_blank" rel="noopener">अधिनियम खोजें ↗</a>
+</article>
+
+<article class="card" data-key="supreme court high court judgments case law केस लॉ निर्णय">
+<span class="tag">Judgments</span>
+<h2>Case Law Database</h2>
+<p>सुप्रीम कोर्ट और हाई कोर्ट के निर्णय खोजें।</p>
+<a href="https://judgments.ecourts.gov.in/" target="_blank" rel="noopener">न्यायिक फैसले खोजें ↗</a>
+</article>
+
+</div>
+
+<div id="empty">कोई मेल खाता विषय नहीं मिला। दूसरा शब्द खोजें।</div>
+
+<div class="note">
+<strong>महत्त्वपूर्ण सूचना:</strong>
+यह प्रारंभिक लाइब्रेरी है, सभी कानूनों और फैसलों का पूर्ण डेटाबेस नहीं।
+किसी कानूनी मामले में उपयोग से पहले वर्तमान कानून और आधिकारिक निर्णय की पुष्टि करें।
+</div>
+</main>
+
+<footer>© <span id="year"></span> Kanoon Mitra | शैक्षिक जानकारी, कानूनी सलाह नहीं</footer>
+
+<script>
+document.getElementById("year").textContent = new Date().getFullYear();
+
+const input = document.getElementById("q");
+const cards = [...document.querySelectorAll(".card")];
+const empty = document.getElementById("empty");
+
+input.addEventListener("input", () => {
+  const query = input.value.trim().toLocaleLowerCase();
+  let count = 0;
+
+  cards.forEach(card => {
+    const text = (
+      card.innerText + " " + (card.dataset.key || "")
+    ).toLocaleLowerCase();
+
+    const match = text.includes(query);
+    card.style.display = match ? "" : "none";
+    if (match) count++;
+  });
+
+  empty.style.display = count ? "none" : "block";
+});
+</script>
+</body>
+</html>
